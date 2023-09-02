@@ -5,26 +5,29 @@
   <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
-<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
-  <form id="registrationForm" class="bg-gray-800 p-6 rounded shadow-md w-80">
+<body class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-white flex items-center justify-center h-screen">
+  <div class="bg-opacity-90 bg-gray-900 p-8 rounded-lg shadow-lg w-96">
     <img id="logo" src="logo.png" alt="Logo" class="w-full h-24 object-contain mb-6">
-    <div>
-      <label for="email" class="block text-sm mb-2">Email:</label>
-      <input type="email" id="email" name="email" class="w-full p-2 border border-gray-700 rounded mb-4">
-    </div>
-    <div>
-      <label for="password" class="block text-sm mb-2">Password:</label>
-      <input type="password" id="password" name="password" class="w-full p-2 border border-gray-700 rounded mb-4">
-    </div>
-    <div>
-      <label for="userType" class="block text-sm mb-2">User Type:</label>
-      <select id="userType" name="userType" class="w-full p-2 border border-gray-700 rounded mb-4">
-        <option value="sender">Sender</option>
-        <option value="traveler">Traveler</option>
-      </select>
-    </div>
-    <input type="submit" value="Register" class="w-full p-2 bg-purple-600 hover:bg-purple-700 rounded text-white font-bold cursor-pointer">
-  </form>
+    <h1 class="text-2xl font-bold mb-4">Register for PackitMate</h1>
+    <form id="registrationForm">
+      <div class="mb-4">
+        <label for="email" class="block text-sm mb-2">Email:</label>
+        <input type="email" id="email" name="email" class="w-full p-2 border border-gray-700 rounded">
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-sm mb-2">Password:</label>
+        <input type="password" id="password" name="password" class="w-full p-2 border border-gray-700 rounded">
+      </div>
+      <div class="mb-4">
+        <label for="userType" class="block text-sm mb-2">User Type:</label>
+        <select id="userType" name="userType" class="w-full p-2 border border-gray-700 rounded">
+          <option value="sender">Sender</option>
+          <option value="traveler">Traveler</option>
+        </select>
+      </div>
+      <input type="submit" value="Register" class="w-full p-2 bg-purple-600 hover:bg-purple-700 rounded text-white font-bold cursor-pointer">
+    </form>
+  </div>
   <script src="register.js"></script>
 </body>
 </html>
