@@ -1,6 +1,5 @@
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  e.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   const userType = document.getElementById('userType').value;
@@ -10,10 +9,10 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     password,
     userType
   })
-  .then(function(response) {
-    console.log(response.data);
+  .then(response => {
+    alert('Registered successfully');
   })
-  .catch(function(error) {
-    console.error(error);
+  .catch(error => {
+    alert('Registration failed');
   });
 });
